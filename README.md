@@ -4,7 +4,7 @@ CareSync is a cloud-enabled healthcare management app built with Flask, AWS Dyna
 Patients can book real doctor availability slots, track medications with reminders, and log vitals.
 Doctors manage their availability and issue prescriptions.
 
-## 📂 Project Structure
+##  Project Structure
 ```
 caresync/
 ├── app.py
@@ -26,7 +26,7 @@ caresync/
     └── styles.css
 ```
 
-## 🛠️ Local Setup
+##  Local Setup
 
 ```bash
 git clone <your-repo-url>
@@ -67,7 +67,7 @@ set the partition key (e.g. `patient_email`, type String) → keep default proje
 - Subscribe your email (protocol: Email) and confirm the subscription
 - Copy the Topic ARN into `.env` as `SNS_TOPIC_ARN`
 
-## 🚢 Deployment (optional — EC2)
+##  Deployment (optional — EC2)
 ```bash
 pip install gunicorn
 gunicorn --bind 0.0.0.0:8000 app:app
@@ -75,23 +75,21 @@ gunicorn --bind 0.0.0.0:8000 app:app
 Attach the IAM role with DynamoDB/SNS permissions directly to the EC2 instance
 instead of using access keys in production.
 
-## 💻 Technologies Used
+##  Technologies Used
 - **Backend:** Python, Flask
 - **Cloud:** AWS DynamoDB, AWS SNS, IAM
 - **Frontend:** HTML, CSS, Jinja2
 
-## 📧 Notification Flow
+##  Notification Flow
 1. Patient signs up / books an appointment / sets a medication reminder / doctor adds a prescription
 2. Event is written to DynamoDB
 3. SNS publishes a notification to the topic
 4. Subscribed email receives the alert
 
-## 🚀 My Contributions
+##  My Contributions
 - Designed the DynamoDB schema (5 tables, 3 GSIs) and IAM permissions
 - Built the full Flask app: auth, role-based dashboards, slot-based booking, medication reminders, vitals tracking
 - Integrated AWS SNS for event-driven notifications
 - Styled the frontend with a custom CSS design system
 - Wrote setup documentation for local + AWS deployment
 
-## 👤 Author
-Md Basheer Khan
