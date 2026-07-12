@@ -42,7 +42,7 @@ python app.py
 
 Runs at `http://127.0.0.1:5000`.
 
-## ☁️ AWS Setup
+##  AWS Setup
 
 ### 1. IAM
 Create an IAM user (or role) with programmatic access and a policy allowing:
